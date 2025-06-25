@@ -25,7 +25,7 @@ export default function Header() {
     // Use a fragment to allow the menu to be a sibling of the header
     // This is better for managing stacking contexts (z-index)
     <>
-      <header className="bg-[#facf41] text-black p-4 px-15 sticky top-0 z-10">
+      <header className="bg-[#facf41] text-black p-4 pt-10 sticky top-0 z-10 flex justify-between">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
@@ -70,7 +70,7 @@ export default function Header() {
                   ></path>
                 )}
               </svg>
-              <div className="text-xl">Menu</div>
+              <div className="hidden md:text-xl">Menu</div>
             </button>
           </div>
         </div>
