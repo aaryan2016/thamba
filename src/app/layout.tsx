@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "THAMBA | Road to Great Ideas",
   description:
     "We are a creative design studio where we build brands that look sharp, feel right, and make noise.From strategy to design, we craft everything you need to stand out.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 }
 
 export default function RootLayout({

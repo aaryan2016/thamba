@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <>
-      <div className="bg-[#facf41] text-black h-screen flex flex-col p-8 pt-20">
+      <div className="bg-[#facf41] text-black h-screen flex flex-col p-4 pt-20">
         <div className="container mx-auto">
           <div className="w-fit ">
             <div className="text-6xl md:text-8xl">ORDINARY IS TAKEN.</div>

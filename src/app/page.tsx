@@ -32,13 +32,13 @@ export default function Home() {
   ]
 
   return (
-    <div className="w-full">
+    <main>
       <Header />
       <HeroSection />
       <FeaturedBanner />
       {products.map((product) => (
         <ProductCard key={product.title} {...product} />
       ))}
-    </div>
+    </main>
   )
 }

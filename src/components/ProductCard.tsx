@@ -37,16 +37,16 @@ export default function ProductCard({
         yOffset={20}
         className="flex w-full flex-col justify-center gap-6 p-8 md:w-1/2 md:p-12"
       >
-        <h2 className="border-b-2 border-black pb-4 text-6xl font-extralight text-gray-900 md:text-8xl">
+        <h2 className="border-b-2 border-black pb-4 text-4xl font-extralight text-gray-900 md:text-8xl">
           {title}
         </h2>
         <div className="flex flex-nowrap items-center justify-between gap-4">
-          <p className="text-4xl font-light uppercase tracking-wider text-gray-500">
+          <p className="text-2xl font-light uppercase tracking-wider text-gray-500">
             {tag}
           </p>
           <Link
             href={path}
-            className="group flex items-center justify-center gap-2 font-extralight uppercase text-4xl text-gray-900 transition-colors duration-300 hover:text-black"
+            className="group flex items-center justify-center gap-2 font-extralight uppercase text-2xl text-gray-900 transition-colors duration-300 hover:text-black"
           >
             <Plus
               size={35}
