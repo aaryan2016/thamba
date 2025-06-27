@@ -25,7 +25,7 @@ export default function Header() {
     // Use a fragment to allow the menu to be a sibling of the header
     // This is better for managing stacking contexts (z-index)
     <>
-      <header className="bg-[#facf41] text-black p-8 pt-10 sticky top-0 z-10 flex justify-between">
+      <header className="bg-[#facf41] text-black p-4 pt-10 sticky top-0 z-10 flex justify-between">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
@@ -42,7 +42,7 @@ export default function Header() {
           <div>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-black focus:outline-none flex items-center align-baseline space-x-2"
+              className="text-black focus:outline-none flex items-center align-baseline space-x-2 pr-10"
               aria-controls="slide-out-menu"
               aria-expanded={isOpen}
             >
@@ -97,7 +97,7 @@ export default function Header() {
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-10 right-20 text-white hover:text-gray-200 focus:outline-none"
+          className="absolute top-12 right-20 text-white hover:text-gray-200 focus:outline-none"
           aria-label="Close menu"
         >
           <svg
@@ -118,35 +118,35 @@ export default function Header() {
         <nav className="flex flex-col items-end space-y-8 mt-20 pr-10">
           <Link
             href="/"
-            className="text-3xl md:text-6xl text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/projects"
-            className="text-3xl md:text-6xl text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Projects
           </Link>
           <Link
             href="/services"
-            className="text-3xl md:text-6xl text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
           <Link
             href="/about-us"
-            className="text-3xl md:text-6xl text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             About Us
           </Link>
           <Link
             href="/contact"
-            className="text-3xl md:text-6xl text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Contact Us
