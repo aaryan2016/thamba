@@ -18,7 +18,7 @@ export default function ScrollFadeInServer({
   duration = 0.5,
   yOffset = 50,
   amount = 0.5,
-  once = true,
+  once = false,
   className = "",
 }: ScrollFadeInProps) {
   const ref = useRef<HTMLDivElement | null>(null)
