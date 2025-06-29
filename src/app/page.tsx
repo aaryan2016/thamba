@@ -1,5 +1,4 @@
 import FeaturedBanner from "@/components/FeaturedBanner"
-import Header from "@/components/Header"
 import HeroSection from "@/components/HeroSection"
 import ProductCard from "@/components/ProductCard"
 import ProductCardHorizontal from "@/components/ProductCardHorizontal"
