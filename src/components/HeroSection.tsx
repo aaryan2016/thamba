@@ -3,13 +3,24 @@ export default function HeroSection() {
     <>
       <div className="bg-[#facf41] text-black h-screen flex flex-col p-4 pt-20">
         <div className="container mx-auto">
-          <div>
+          {/* 
+        This is the key change. We wrap the three text elements in a single
+        container that uses `inline-flex` and `flex-col`.
+      */}
+          <div className="inline-flex flex-col">
+            {/* These are the two headline elements */}
             <div className="text-6xl md:text-8xl">ORDINARY IS TAKEN.</div>
             <div className="text-6xl md:text-8xl">WANT SOMETHING ELSE?</div>
-            <div className="text-2xl text-right pt-2">
+
+            {/* 
+          This is the agency line. We remove `text-right` and add `self-end` 
+          to align it to the end of the flex container.
+        */}
+            <div className="text-2xl self-end pt-2">
               THAMBA. CREATIVE AGENCY
             </div>
           </div>
+
           <div className="pt-5 w-full md:w-2/3 font-light">
             <div className="text-2xl md:text-5xl">WHAT WE DO</div>
             <div className="text-xl md:text-3xl pt-5">
