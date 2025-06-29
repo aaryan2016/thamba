@@ -55,7 +55,9 @@ export default function HireUsForm() {
   return (
     <section className="w-full max-w-3xl mx-auto p-8 bg-[#939bfb]">
       <h1 className="text-4xl md:text-5xl font-extralight mb-2">Hire Us</h1>
-      <p className="text-black mb-8">Have a project in mind? Let's talk.</p>
+      <p className="text-black mb-8">
+        Have a project in mind? Let&apos;s talk.
+      </p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="flex flex-col md:flex-row gap-6">
