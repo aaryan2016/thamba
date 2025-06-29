@@ -16,7 +16,7 @@ export default async function Page() {
   }
 
   return (
-    <main className="container mx-auto">
+    <main className="">
       <div className="flex flex-col items-center">
         {project.imageLinks.map((link, index) => {
           // Skip image at index 11 as it's rendered with index 10

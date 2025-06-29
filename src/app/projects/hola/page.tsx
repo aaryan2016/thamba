@@ -16,7 +16,7 @@ export default async function Page() {
   }
 
   return (
-    <main className="container mx-auto flex flex-col items-center justify-center min-h-screen">
+    <main className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-full">
         <Image
           src={project.imageLinks[0]}
