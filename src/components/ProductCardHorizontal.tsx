@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Plus } from "lucide-react"
 import ScrollFadeInServer from "./ScrollFadeInServer"
+import Image from "next/image"
 
 interface ProductCardHorizontalProps {
   image?: string
@@ -20,11 +21,13 @@ export default function ProductCardHorizontal({
       className={`mx-auto flex w-full flex-col overflow-hidden bg-white shadow-lg border-b-2 border-black`}
     >
       {/* Image Section */}
-      <div className="relative">
-        <img
-          className="h-auto w-full object-cover"
+      <div className="relative h-[80vh]">
+        <Image
+          className="h-full w-full object-cover"
           src={image}
           alt={`Product image for ${title}`}
+          width={1200}
+          height={800}
         />
         {/* Title Overlay */}
         <div className="absolute inset-0 flex items-center bg-black/20 p-8 md:p-12">
