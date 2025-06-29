@@ -2,6 +2,7 @@ import FeaturedBanner from "@/components/FeaturedBanner"
 import Header from "@/components/Header"
 import HeroSection from "@/components/HeroSection"
 import ProductCard from "@/components/ProductCard"
+import StackingImages from "@/components/StackingImages"
 
 export default function Home() {
   const products = [
@@ -39,6 +40,7 @@ export default function Home() {
       {products.map((product) => (
         <ProductCard key={product.title} {...product} />
       ))}
+      <StackingImages />
     </main>
   )
 }
