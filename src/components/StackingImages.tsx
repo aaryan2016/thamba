@@ -97,7 +97,7 @@ function AnimatedTitle({
 
   return (
     <motion.div
-      className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
+      className="absolute left-0 top-1/4 -translate-y-1/2 w-full"
       style={{
         x: titleX,
         opacity: titleOpacity,
@@ -128,7 +128,7 @@ export default function StackingImages() {
         </h1>
       </div>
 
-      <div className="sticky top-72 flex justify-center items-center px-4">
+      <div className="sticky top-56 flex justify-center items-center px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Images Section */}
           <div className="relative w-80 h-96">
