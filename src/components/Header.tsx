@@ -118,35 +118,35 @@ export default function Header() {
         <nav className="flex flex-col items-end space-y-8 mt-20 pr-10">
           <Link
             href="/"
-            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/projects"
-            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Projects
           </Link>
           <Link
             href="/services"
-            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
           <Link
             href="/about-us"
-            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             About Us
           </Link>
           <Link
             href="/contact"
-            className="text-3xl md:text-6xl uppercase text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+            className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
             onClick={() => setIsOpen(false)}
           >
             Contact Us
