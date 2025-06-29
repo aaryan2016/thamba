@@ -28,8 +28,8 @@ export default async function Page() {
       </div>
       <div>Item 2</div>
 
-      <div className="flex w-full items-center">
-        <div className="w-1/2 p-20 bg-white">
+      <div className="flex flex-col md:flex-row w-full items-center">
+        <div className="w-full md:w-1/2 p-10 bg-white">
           <Image
             src={project.imageLinks[2]}
             alt={project.title}
@@ -38,7 +38,7 @@ export default async function Page() {
             className="w-full h-auto"
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <Image
             src={project.imageLinks[3]}
             alt={project.title}
@@ -57,8 +57,8 @@ export default async function Page() {
           className=" w-full h-auto"
         />
       </div>
-      <div className="flex w-full items-center">
-        <div className="w-1/2 p-20 bg-white">
+      <div className="flex flex-col md:flex-row w-full items-center">
+        <div className="w-full md:w-1/2 p-10 bg-white">
           <Image
             src={project.imageLinks[5]}
             alt={project.title}
@@ -67,7 +67,7 @@ export default async function Page() {
             className=" w-full h-auto"
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <Image
             src={project.imageLinks[6]}
             alt={project.title}
