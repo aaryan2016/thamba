@@ -44,7 +44,6 @@ export default function Home() {
 
   return (
     <main>
-      <Header />
       <HeroSection />
       <FeaturedBanner />
       {products.map((product) => (
