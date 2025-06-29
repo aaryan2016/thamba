@@ -2,6 +2,7 @@ import FeaturedBanner from "@/components/FeaturedBanner"
 import Header from "@/components/Header"
 import HeroSection from "@/components/HeroSection"
 import ProductCard from "@/components/ProductCard"
+import ProductCardHorizontal from "@/components/ProductCardHorizontal"
 import StackingImages from "@/components/StackingImages"
 
 export default function Home() {
@@ -32,6 +33,15 @@ export default function Home() {
     },
   ]
 
+  const productsHorizontal = [
+    {
+      image: "/images/pirul.gif",
+      path: "/",
+      title: "PIRUL HANDICARFTS",
+      tag: "BRAND IDENTITY, SOCIAL CAMPAIGN",
+    },
+  ]
+
   return (
     <main>
       <Header />
@@ -39,6 +49,9 @@ export default function Home() {
       <FeaturedBanner />
       {products.map((product) => (
         <ProductCard key={product.title} {...product} />
+      ))}
+      {productsHorizontal.map((product) => (
+        <ProductCardHorizontal key={product.title} {...product} />
       ))}
       <StackingImages />
     </main>
