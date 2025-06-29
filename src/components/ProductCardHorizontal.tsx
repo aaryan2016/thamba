@@ -28,6 +28,7 @@ export default function ProductCardHorizontal({
           alt={`Product image for ${title}`}
           width={1200}
           height={800}
+          unoptimized
         />
         {/* Title Overlay */}
         <div className="absolute inset-0 flex items-center bg-black/20 p-8 md:p-12">

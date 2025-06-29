@@ -37,13 +37,12 @@ export default function RootLayout({
     : null
 
   return (
-    <html lang="en">
-      <body className={`${roboto.variable}`}>
-        {children}
-        {currentSlug && projects.includes(currentSlug) && (
-          <BottomNavBar projects={projects} currentSlug={currentSlug} />
-        )}
-      </body>
-    </html>
+    <div className={`${roboto.variable}`}>
+      {children}
+      {currentSlug && projects.includes(currentSlug) && (
+        <BottomNavBar projects={projects} currentSlug={currentSlug} />
+      )}
+    </div>
   )
 }
+  

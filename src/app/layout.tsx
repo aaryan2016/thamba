@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Roboto } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 const roboto = Roboto({
   weight: "200", // '300' = Roboto Light
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${roboto.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

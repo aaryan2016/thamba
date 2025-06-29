@@ -11,7 +11,7 @@ export default function Home() {
       image:
         "https://static.wixstatic.com/media/66afa0_0fc1af3eb324451db1a1a2792b2c48c7~mv2.jpg/v1/fill/w_950,h_913,fp_0.58_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/OASIS%20BRANDGUIDELINES-01.jpg",
       tag: "IDENTITY, communication STRATEGY",
-      path: "/",
+      path: "/projects/oasis",
       title: "OASIS VENTURES",
     },
     {

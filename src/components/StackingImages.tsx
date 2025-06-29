@@ -120,7 +120,7 @@ export default function StackingImages() {
   })
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] bg-gray-100">
+    <div ref={containerRef} className="relative h-[300vh] bg-gray-100 p-20">
       {/* Header Title */}
       <div className="sticky top-20 py-10 text-center px-4">
         <h1 className="text-5xl md:text-8xl font-extralight text-gray-900 tracking-wide">
