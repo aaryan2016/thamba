@@ -16,34 +16,75 @@ export default async function Page() {
   }
 
   return (
-    <main className="container mx-auto">
-      {/* <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-2">{project.title}</h1>
-        {project.tag && (
-          <p className="text-md md:text-lg text-gray-500 uppercase tracking-widest">
-            {project.tag}
-          </p>
-        )}
+    <main className="container mx-auto flex flex-col items-center justify-center min-h-screen">
+      <div className="w-full">
+        <Image
+          src={project.imageLinks[0]}
+          alt={project.title}
+          width={1200}
+          height={800}
+          className=" w-full h-auto"
+        />
       </div>
+      <div>Item 2</div>
 
-      {project.description && project.description.length > 0 && (
-        <p className="max-w-3xl mx-auto text-center text-gray-700 mb-12">
-          {project.description}
-        </p>
-      )} */}
-
-      <div className="flex flex-col items-center">
-        {project.imageLinks.map((link, index) => (
-          <div key={link} className="relative w-full">
-            <Image
-              src={link}
-              alt={`${project.title} - Image ${index + 1}`}
-              width={1200}
-              height={800}
-              className="shadow-lg w-full h-auto"
-            />
-          </div>
-        ))}
+      <div className="flex w-full items-center">
+        <div className="w-1/2 p-20 bg-white">
+          <Image
+            src={project.imageLinks[2]}
+            alt={project.title}
+            width={800}
+            height={800}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="w-1/2">
+          <Image
+            src={project.imageLinks[3]}
+            alt={project.title}
+            width={600}
+            height={600}
+            className=" w-full h-auto"
+          />
+        </div>
+      </div>
+      <div className="w-full">
+        <Image
+          src={project.imageLinks[1]}
+          alt={project.title}
+          width={1200}
+          height={800}
+          className=" w-full h-auto"
+        />
+      </div>
+      <div className="flex w-full items-center">
+        <div className="w-1/2 p-20 bg-white">
+          <Image
+            src={project.imageLinks[5]}
+            alt={project.title}
+            width={800}
+            height={800}
+            className=" w-full h-auto"
+          />
+        </div>
+        <div className="w-1/2">
+          <Image
+            src={project.imageLinks[6]}
+            alt={project.title}
+            width={800}
+            height={1200}
+            className=" w-full h-auto"
+          />
+        </div>
+      </div>
+      <div>
+        <Image
+          src={project.imageLinks[4]}
+          alt={project.title}
+          width={1200}
+          height={800}
+          className="w-full h-auto"
+        />
       </div>
     </main>
   )

@@ -41,7 +41,7 @@ const projectsData: Project[] = [
             "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/HOLA/image7.webp"
         ]
     },
-    
+
 ]
 
 export default projectsData;
