@@ -29,8 +29,8 @@ export default function ContactPage() {
 					<div className="text-6xl">Location</div>
 					<div className="text-4xl">Napur</div>
 					<div className="text-xl">
-						18, SHIMPLA, Suryoday enclave, opp. Gaurav apartments,
-						Seminary Hills, Nagpur-440006
+						18, SHIMPLA, Suryoday enclave, opp. Gaurav apartments, Seminary
+						Hills, Nagpur-440006
 					</div>
 					<div>
 						<div className="text-2xl">

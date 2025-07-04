@@ -31,11 +31,7 @@ export default function ServicesCard() {
 	return (
 		<div className="flex h-full flex-col justify-center space-y-8 bg-[#ec892e] p-8 md:p-20">
 			{services.map((service, index) => (
-				<ScrollFadeInServer
-					key={index}
-					delay={index * 0.1}
-					yOffset={20}
-				>
+				<ScrollFadeInServer key={index} delay={index * 0.1} yOffset={20}>
 					<h2 className="text-2xl font-light uppercase text-black md:text-4xl">
 						{service.title}
 					</h2>

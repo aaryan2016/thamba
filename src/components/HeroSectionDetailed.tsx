@@ -23,12 +23,7 @@ export default function HeroSectionDetailed({
 					</h1>
 				</ScrollFadeInServer>
 				<ScrollFadeInServer yOffset={20} delay={0.2}>
-					<Image
-						src={imageSrc}
-						alt={imageAlt}
-						width={500}
-						height={500}
-					/>
+					<Image src={imageSrc} alt={imageAlt} width={500} height={500} />
 				</ScrollFadeInServer>
 			</div>
 			<ScrollFadeInServer

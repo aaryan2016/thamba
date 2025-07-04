@@ -12,8 +12,7 @@ export default function BottomNavBar({
 }: BottomNavBarProps) {
 	const currentIndex = projects.indexOf(currentSlug);
 
-	const prevProjectSlug =
-		currentIndex > 0 ? projects[currentIndex - 1] : null;
+	const prevProjectSlug = currentIndex > 0 ? projects[currentIndex - 1] : null;
 	const nextProjectSlug =
 		currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 

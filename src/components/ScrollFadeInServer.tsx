@@ -58,9 +58,7 @@ export default function ScrollFadeInServer({
 			className={className}
 			style={{
 				opacity: isVisible ? 1 : 0,
-				transform: isVisible
-					? "translateY(0px)"
-					: `translateY(${yOffset}px)`,
+				transform: isVisible ? "translateY(0px)" : `translateY(${yOffset}px)`,
 				transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
 			}}
 		>

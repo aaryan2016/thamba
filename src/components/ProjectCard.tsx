@@ -30,16 +30,12 @@ export default function ProjectCard({
 				{/* Top Right Section */}
 				<div className="text-right">
 					<h3 className="text-4xl font-extralight">{title}</h3>
-					<p className="text-lg font-light uppercase tracking-wider">
-						{tag}
-					</p>
+					<p className="text-lg font-light uppercase tracking-wider">{tag}</p>
 				</div>
 
 				{/* Bottom Section */}
 				<div className="flex items-end justify-between">
-					<p className="max-w-md text-base font-light">
-						{description}
-					</p>
+					<p className="max-w-md text-base font-light">{description}</p>
 					<Link
 						href={path}
 						className="group/link flex shrink-0 items-center justify-center gap-2 font-extralight uppercase text-2xl text-white transition-colors duration-300 hover:text-gray-200"

@@ -12,9 +12,7 @@ export default function FeaturedBanner() {
 						yOffset={50}
 						delay={0}
 					>
-						<div className="text-4xl font-light md:text-6xl">
-							FEATURED WORK
-						</div>
+						<div className="text-4xl font-light md:text-6xl">FEATURED WORK</div>
 					</ScrollFadeInServer>
 					<ScrollFadeInServer
 						className="hidden w-full flex-col md:flex md:w-1/2"
