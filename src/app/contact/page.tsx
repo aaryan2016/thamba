@@ -22,26 +22,26 @@ export default function ContactPage() {
 						alt="services-1"
 						width={800}
 						height={800}
-						className="p-30"
+						className="p-8 md:p-16"
 					/>
 				</div>
-				<div className="flex flex-col w-full md:w-1/2 bg-[#ec892e] text-black uppercase font-light p-40 items-start justify-center gap-10">
-					<div className="text-6xl">Location</div>
-					<div className="text-4xl">Napur</div>
-					<div className="text-xl">
+				<div className="flex flex-col w-full md:w-1/2 bg-[#ec892e] text-black uppercase font-light p-8 md:p-20 lg:p-40 items-start justify-center gap-10">
+					<div className="text-4xl md:text-6xl">Location</div>
+					<div className="text-3xl md:text-4xl">Napur</div>
+					<div className="text-lg md:text-xl">
 						18, SHIMPLA, Suryoday enclave, opp. Gaurav apartments, Seminary
 						Hills, Nagpur-440006
 					</div>
 					<div>
-						<div className="text-2xl">
+						<div className="text-xl md:text-2xl">
 							<a
-								href="
-                mailto:info@mysite.com"
+								href="mailto:info@mysite.com"
+								className="underline transition-opacity hover:opacity-80"
 							>
 								INFO@MYSITE.COM
 							</a>
 						</div>
-						<div className="text-2xl">+91 90711 51567</div>
+						<div className="text-xl md:text-2xl">+91 90711 51567</div>
 					</div>
 				</div>
 			</div>
