@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/services", label: "Services" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/contact", label: "Contact Us" },
-]
+	{ href: "/", label: "Home" },
+	{ href: "/projects", label: "Projects" },
+	{ href: "/services", label: "Services" },
+	{ href: "/about-us", label: "About Us" },
+	{ href: "/contact", label: "Contact Us" },
+];
 
 export default function NavBar() {
-  const pathname = usePathname()
+	const pathname = usePathname();
 
-  return (
-    <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 p-5 md:justify-between">
-      {navLinks.map(({ href, label }) => {
-        const isActive = pathname === href
-        return (
-          <Link
-            key={href}
-            href={href}
-            className={cn(
-              "uppercase font-light text-black transition-colors hover:text-gray-500",
-              isActive && "border-b-1 border-black"
-            )}
-          >
-            {label}
-          </Link>
-        )
-      })}
-    </nav>
-  )
+	return (
+		<nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 p-5 md:justify-between">
+			{navLinks.map(({ href, label }) => {
+				const isActive = pathname === href;
+				return (
+					<Link
+						key={href}
+						href={href}
+						className={cn(
+							"uppercase font-light text-black transition-colors hover:text-gray-500",
+							isActive && "border-b-1 border-black",
+						)}
+					>
+						{label}
+					</Link>
+				);
+			})}
+		</nav>
+	);
 }
