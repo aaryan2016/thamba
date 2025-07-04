@@ -15,7 +15,7 @@ export default function ServicesPage() {
         description={description}
       />
 
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <Image
           src={
             "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Static%20/services_1.webp"
@@ -24,7 +24,7 @@ export default function ServicesPage() {
           width={800}
           height={800}
         />
-        <div className="col-start-1 row-start-2">
+        <div className="md:col-start-1 md:row-start-2">
           <Image
             src={
               "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Static%20/services_2.webp"
@@ -34,7 +34,7 @@ export default function ServicesPage() {
             height={800}
           />
         </div>
-        <div className="row-span-2 col-start-2 row-start-1">
+        <div className="md:col-start-2 md:row-start-1 md:row-span-2">
           <ServicesCard />
         </div>
       </div>

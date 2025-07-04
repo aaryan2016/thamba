@@ -29,13 +29,15 @@ export default function ServicesCard() {
   ]
 
   return (
-    <div className="h-full flex flex-col justify-center space-y-8 bg-[#ec892e] p-20">
+    <div className="flex h-full flex-col justify-center space-y-8 bg-[#ec892e] p-8 md:p-20">
       {services.map((service, index) => (
         <ScrollFadeInServer key={index} delay={index * 0.1} yOffset={20}>
-          <h2 className="uppercase text-4xl font-light text-black">
+          <h2 className="text-2xl font-light uppercase text-black md:text-4xl">
             {service.title}
           </h2>
-          <p className="text-black text-lg font-light mt-2">{service.desc}</p>
+          <p className="mt-2 text-base font-light text-black md:text-lg">
+            {service.desc}
+          </p>
         </ScrollFadeInServer>
       ))}
     </div>
