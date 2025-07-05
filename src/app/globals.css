@@ -16,7 +16,16 @@ body {
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: 'Helvetica W01 Light';
+	src: url('/fonts/Helvetica_W01_Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+  }
+
 @theme inline {
+	--font-helvetica-light: "Helvetica W01 Light", sans-serif;	
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
@@ -124,6 +133,9 @@ body {
 }
 
 @layer base {
+	.font-helvetica {
+		font-family: var(--font-helvetica-light);
+	  }
 	* {
 		@apply border-border outline-ring/50;
 	}
