@@ -28,7 +28,7 @@ export const jobsData: Job[] = [
     },
     {
         id: 3,
-        jobTitle: "GRAPHIC DESIGNER, REMOTE(FREELANCE / PROJECT BASED)",
+        jobTitle: "GRAPHIC DESIGNER, REMOTE (FREELANCE / PROJECT BASED)",
         aboutTheJob: `Love fonts more than food? We’re looking for someone who can bring our concepts to life visually. From branding decks to campaign creatives, you’ll help design our agency’s story — pixel by pixel. This is a freelance/project-based role, perfect if you enjoy working across different styles and formats. We’d love to see your portfolio — the weirder, the better.`,
         requirements: [
             "Strong design sense & typography skills",

@@ -80,9 +80,8 @@ export default function Header() {
 
 			{/* Overlay: covers the page behind the menu */}
 			<div
-				className={`fixed inset-0 bg-black/60 z-20 transition-opacity duration-200 ease-in-out ${
-					isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-				}`}
+				className={`fixed inset-0 bg-black/60 z-20 transition-opacity duration-200 ease-in-out ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+					}`}
 				onClick={() => setIsOpen(false)}
 				aria-hidden="true"
 			/>
@@ -90,9 +89,8 @@ export default function Header() {
 			{/* Expanded Menu Panel */}
 			<div
 				id="slide-out-menu"
-				className={`fixed top-0 right-0 h-screen w-4/5 md:w-1/2 bg-[#af82cf] p-8 transform transition-transform duration-300 ease-in-out z-30 ${
-					isOpen ? "translate-x-0" : "translate-x-full"
-				}`}
+				className={`fixed top-0 right-0 h-screen w-4/5 md:w-1/2 bg-[#af82cf] p-8 transform transition-transform duration-300 ease-in-out z-30 ${isOpen ? "translate-x-0" : "translate-x-full"
+					}`}
 				role="dialog"
 				aria-modal="true"
 			>
@@ -147,6 +145,13 @@ export default function Header() {
 						onClick={() => setIsOpen(false)}
 					>
 						About
+					</Link>
+					<Link
+						href="/jobs"
+						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
+						onClick={() => setIsOpen(false)}
+					>
+						Jobs
 					</Link>
 					<Link
 						href="/contact"
