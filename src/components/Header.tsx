@@ -41,6 +41,7 @@ export default function Header() {
 					{/* Hamburger Menu Button */}
 					<div>
 						<button
+							type="button"
 							onClick={() => setIsOpen(!isOpen)}
 							className="text-black focus:outline-none flex items-center align-baseline space-x-2 pr-10"
 							aria-controls="slide-out-menu"
@@ -51,6 +52,7 @@ export default function Header() {
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
+								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								{/* The icon changes based on the menu state */}
@@ -70,7 +72,7 @@ export default function Header() {
 									></path>
 								)}
 							</svg>
-							<div className="hidden md:text-xl">Menu</div>
+							<div className="hiden md:block md:text-xl">Menu</div>
 						</button>
 					</div>
 				</div>
@@ -99,12 +101,14 @@ export default function Header() {
 					onClick={() => setIsOpen(false)}
 					className="absolute top-12 right-20 text-white hover:text-gray-200 focus:outline-none"
 					aria-label="Close menu"
+					type="button"
 				>
 					<svg
 						className="w-8 h-8"
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
+						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
@@ -138,18 +142,18 @@ export default function Header() {
 						Services
 					</Link>
 					<Link
-						href="/about-us"
+						href="/about"
 						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
 						onClick={() => setIsOpen(false)}
 					>
-						About Us
+						About
 					</Link>
 					<Link
 						href="/contact"
 						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
 						onClick={() => setIsOpen(false)}
 					>
-						Contact Us
+						Contact
 					</Link>
 				</nav>
 			</div>

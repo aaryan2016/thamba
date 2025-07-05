@@ -25,12 +25,13 @@ export default function ScrollFadeInServer({
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
+		const element = ref.current;
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				if (entry.isIntersecting) {
 					setIsVisible(true);
-					if (once && ref.current) {
-						observer.unobserve(ref.current);
+					if (once && element) {
+						observer.unobserve(element);
 					}
 				} else if (!once) {
 					setIsVisible(false);
@@ -41,13 +42,13 @@ export default function ScrollFadeInServer({
 			},
 		);
 
-		if (ref.current) {
-			observer.observe(ref.current);
+		if (element) {
+			observer.observe(element);
 		}
 
 		return () => {
-			if (ref.current) {
-				observer.unobserve(ref.current);
+			if (element) {
+				observer.unobserve(element);
 			}
 		};
 	}, [once, amount]);

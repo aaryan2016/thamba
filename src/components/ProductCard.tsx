@@ -28,7 +28,7 @@ export default function ProductCard({
 				<img
 					className="h-full w-full object-cover md:h-full"
 					src={image}
-					alt={`Product image for ${title}`}
+					alt={title}
 				/>
 			</div>
 
