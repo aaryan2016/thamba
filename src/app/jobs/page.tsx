@@ -1,7 +1,6 @@
 import HeroSectionDetailed from "@/components/HeroSectionDetailed"
 import JobCard from "@/components/JobCard"
 import { jobsData, jobsHeaderDescription } from "@/data/jobsData"
-import { div } from "framer-motion/client"
 
 const jobs = () => {
     return (
@@ -13,7 +12,7 @@ const jobs = () => {
                 description={jobsHeaderDescription}
             />
             <div className="flex flex-col">
-                {jobsData.map(({ id, ...rest }, index) => (
+                {jobsData.map(({ id, ...rest }) => (
                     <div key={id} className="border-t border-black">
                         <JobCard {...rest} />
                     </div>
