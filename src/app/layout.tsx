@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-// import { Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
-// const roboto = Roboto({
-// 	weight: "200", // '300' = Roboto Light
-// 	subsets: ["latin"],
-// 	variable: "--font-roboto", // optional CSS variable
-// });
+const roboto = Roboto({
+	weight: "200", // '300' = Roboto Light
+	subsets: ["latin"],
+	variable: "--font-roboto", // optional CSS variable
+});
 
 export const metadata: Metadata = {
 	title: "THAMBA | Road to Great Ideas",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="font-helvetica-light">
+			<body className={`${roboto.variable} font-helvetica-light`}>
 				<Header />
 				{children}
 				<Footer />

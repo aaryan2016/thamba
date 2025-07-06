@@ -95,35 +95,29 @@ function AnimatedTitle({
 	// Hooks are at the top level of the AnimatedTitle component
 	const progressStep = 1 / total;
 
-	const titleOpacity = useTransform(
+	// Animate opacity: fade in and stay visible
+	const opacity = useTransform(
 		scrollYProgress,
-		[
-			(i - 0.1) * progressStep,
-			i * progressStep + 0.5 * progressStep,
-			(i + 0.9) * progressStep,
-			(i + 1) * progressStep,
-		],
-		[0, 1, 1, 0],
-	);
-
-	const titleProgress = useTransform(
-		scrollYProgress,
-		[i * progressStep, (i + 1) * progressStep],
+		[i * progressStep, (i + 0.2) * progressStep],
 		[0, 1],
 	);
-	const titleX = useTransform(titleProgress, [0, 1], [50, 0]);
-	const titleScale = useTransform(titleProgress, [0, 1], [0.9, 1]);
+
+	// Animate vertical position: slide up into view
+	const y = useTransform(
+		scrollYProgress,
+		[i * progressStep, (i + 0.2) * progressStep],
+		[20, 0], // Slide up by 20px
+	);
 
 	return (
 		<motion.div
-			className="absolute left-0 top-1/4 -translate-y-1/2 w-full"
+			className="w-full" // Removed absolute positioning
 			style={{
-				x: titleX,
-				opacity: titleOpacity,
-				scale: titleScale,
+				opacity,
+				y,
 			}}
 		>
-			<h2 className="text-3xl md:text-6xl font-extralight text-black text-center md:text-left md:text-nowrap uppercase">
+			<h2 className="text-xl md:text-4xl font-extralight text-black text-center md:text-left md:text-nowrap uppercase">
 				{item.title}
 			</h2>
 		</motion.div>
@@ -164,7 +158,7 @@ export default function StackingImages() {
 					</div>
 
 					{/* Titles Section */}
-					<div className="relative w-80 md:w-auto h-48 md:h-96 flex items-center">
+					<div className="relative w-80 md:w-auto h-48 md:h-96 flex flex-col justify-center items-center">
 						{imageData.map((item, i) => (
 							// We render the new component inside the map
 							<AnimatedTitle
