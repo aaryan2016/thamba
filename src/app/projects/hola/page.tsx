@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ProductDetails from "@/components/ProductDetails";
 import projectsData from "@/data/projectsData";
 
 export default async function Page() {
@@ -26,8 +27,15 @@ export default async function Page() {
 					className=" w-full h-auto"
 				/>
 			</div>
-			<div>Item 2</div>
-
+			<ProductDetails
+				title="HOLA"
+				client="Hola"
+				typeOfClient="Beauty & Wellness"
+				category={["Brand Identity", "Social", "Communication Strategy"]}
+				brief="Design a distinctive brand identity that reflects their luxurious services and modern aesthetics."
+				whatWeDid="We developed a complete brand identity for HOLA, including logo, visual language, and communication strategy."
+				result="The brand identity gave HOLA a polished, upscale presence, helping it stand out in the competitive beauty and wellness market. Clear and consistent communication across platforms enhanced customer trust and recall. The new identity resonated with their target audience, contributing to increased footfall and stronger brand recognition."
+			/>
 			<div className="flex flex-col md:flex-row w-full items-center">
 				<div className="w-full md:w-1/2 p-10 bg-white">
 					<Image

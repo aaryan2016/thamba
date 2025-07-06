@@ -24,7 +24,15 @@ export default async function Page() {
 					className=" w-full h-auto"
 				/>
 			</div>
-			<ProductDetails />
+			<ProductDetails
+				title="DRAVYAS"
+				client="Dravyas - Healthcare"
+				typeOfClient="Ayurveda"
+				category={["Label Design", "Packaging"]}
+				brief="DRAVYAS approached us to design packaging for their new ayurvedic health drink."
+				whatWeDid="We crafted a vibrant, illustrative label featuring stylized botanical elements to reflect the drink’s herbal ingredients."
+				result="The packaging effectively conveyed the product’s Ayurvedic roots while distinguishing itself in the health beverage category. It enhanced brand visibility, leading to positive feedback from early retail partners. The colorful, nature-inspired design resonated with health-conscious consumers, increasing interest in trials and purchase intent."
+			/>
 			<div className="flex flex-col md:flex-row w-full">
 				<div className="w-full md:w-1/2 bg-white">
 					<Image

@@ -16,7 +16,15 @@ export default function Page() {
 	return (
 		<main className="">
 			<div className="flex flex-col items-center">
-				<ProductDetails />
+				<ProductDetails
+					title="BOOK COVERS & ILLUSTRATIONS"
+					client="The Browser"
+					typeOfClient="Publishing"
+					category={["Book Covers", "Layout & Stationery Design"]}
+					brief="We partnered with BROWSER on an ongoing basis, designing book covers across genres, curated social media creatives, and elegant stationery."
+					whatWeDid="We designed book covers across genres, curated social media creatives, and elegant stationery."
+					result="Our collaboration helped BROWSER build a consistent and engaging brand presence, both in print and digital spaces. The refreshed book cover designs elevated the perceived value of their publications, while the cohesive social media visuals increased engagement with their author community. This partnership positioned BROWSER as not just a publisher, but a creative ecosystem for emerging and established writers."
+				/>
 				{project.imageLinks && project.imageLinks.length > 0 ? (
 					// Use slice(1) to create a new array without the first element
 					project.imageLinks
