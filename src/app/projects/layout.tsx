@@ -30,7 +30,7 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const projects = ["oasis", "hola"]; // This could be fetched from a CMS or a data file
+	const projects = ["pirul", "dravyas", "browser", "oasis", "blueone", "hola"]; // This could be fetched from a CMS or a data file
 	const pathname = usePathname();
 	const currentSlug = pathname.startsWith("/projects/")
 		? pathname.split("/")[2]
