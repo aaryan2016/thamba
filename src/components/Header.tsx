@@ -2,7 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+const navLinks = [
+	{ href: "/", label: "Home" },
+	{ href: "/projects", label: "Projects" },
+	{ href: "/services", label: "Services" },
+	{ href: "/about", label: "About" },
+	{ href: "/jobs", label: "Jobs" },
+	{ href: "/contact", label: "Contact" },
+];
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +30,8 @@ export default function Header() {
 			document.body.style.overflow = "unset";
 		};
 	}, [isOpen]);
+
+	const pathname = usePathname();
 
 	return (
 		// Use a fragment to allow the menu to be a sibling of the header
@@ -80,8 +92,9 @@ export default function Header() {
 
 			{/* Overlay: covers the page behind the menu */}
 			<div
-				className={`fixed inset-0 bg-black/60 z-20 transition-opacity duration-200 ease-in-out ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-					}`}
+				className={`fixed inset-0 bg-black/60 z-20 transition-opacity duration-200 ease-in-out ${
+					isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+				}`}
 				onClick={() => setIsOpen(false)}
 				aria-hidden="true"
 			/>
@@ -89,8 +102,9 @@ export default function Header() {
 			{/* Expanded Menu Panel */}
 			<div
 				id="slide-out-menu"
-				className={`fixed top-0 right-0 h-screen w-4/5 md:w-1/2 bg-[#af82cf] p-8 transform transition-transform duration-300 ease-in-out z-30 ${isOpen ? "translate-x-0" : "translate-x-full"
-					}`}
+				className={`fixed top-0 right-0 h-screen w-4/5 md:w-1/2 bg-[#af82cf] p-8 transform transition-transform duration-300 ease-in-out z-30 ${
+					isOpen ? "translate-x-0" : "translate-x-full"
+				}`}
 				role="dialog"
 				aria-modal="true"
 			>
@@ -118,48 +132,22 @@ export default function Header() {
 					</svg>
 				</button>
 				<nav className="flex flex-col items-end space-y-8 mt-20 pr-10">
-					<Link
-						href="/"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						Home
-					</Link>
-					<Link
-						href="/projects"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						Projects
-					</Link>
-					<Link
-						href="/services"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						Services
-					</Link>
-					<Link
-						href="/about"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						About
-					</Link>
-					<Link
-						href="/jobs"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						Jobs
-					</Link>
-					<Link
-						href="/contact"
-						className="text-3xl md:text-6xl uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50"
-						onClick={() => setIsOpen(false)}
-					>
-						Contact
-					</Link>
+					{navLinks.map(({ href, label }) => {
+						const isActive =
+							href === "/" ? pathname === href : pathname.startsWith(href);
+						return (
+							<Link
+								key={href}
+								href={href}
+								className={`text-3xl md:text-6xl font-light uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50 ${
+									isActive ? "underline decoration-4 underline-offset-8" : ""
+								}`}
+								onClick={() => setIsOpen(false)}
+							>
+								{label}
+							</Link>
+						);
+					})}
 				</nav>
 			</div>
 		</>
