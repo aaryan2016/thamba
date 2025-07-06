@@ -32,7 +32,7 @@ export default function ProductCardHorizontal({
 				/>
 				{/* Title Overlay */}
 				<div className="absolute inset-0 flex items-center bg-black/20 p-8 md:p-12">
-					<h2 className="w-full border-b-2 border-white pb-4 text-4xl font-extralight text-white md:w-1/2 md:text-8xl">
+					<h2 className="w-full border-b-2 border-white pb-4 text-4xl font-extralight text-white md:w-1/2 md:text-6xl">
 						{title}
 					</h2>
 				</div>

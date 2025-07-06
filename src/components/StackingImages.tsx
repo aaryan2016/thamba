@@ -11,12 +11,26 @@ import { useRef } from "react";
 
 // --- Data remains the same ---
 const imageData = [
-	{ src: "/images/image1.webp", title: "Mountain Adventure" },
-	{ src: "/images/image2.webp", title: "Ocean Waves" },
-	{ src: "/images/image3.webp", title: "Forest Trail" },
-	{ src: "/images/image4.webp", title: "City Lights" },
-	{ src: "/images/image5.webp", title: "Snowy Peaks" },
-	{ src: "/images/image6.webp", title: "City Lights" },
+	{
+		src: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/ClientList/01.webp",
+		title: "Pirul",
+	},
+	{
+		src: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/ClientList/02.webp",
+		title: "Oasis",
+	},
+	{
+		src: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/ClientList/03.webp",
+		title: "Bhargavi Amirineni",
+	},
+	{
+		src: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/ClientList/04.webp",
+		title: "Hola",
+	},
+	{
+		src: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/ClientList/05.webp",
+		title: "Irva",
+	},
 ];
 
 // --- NEW: Child component for each Image Card ---
@@ -109,7 +123,7 @@ function AnimatedTitle({
 				scale: titleScale,
 			}}
 		>
-			<h2 className="text-4xl md:text-6xl font-extralight text-gray-800 text-center md:text-left md:text-nowrap">
+			<h2 className="text-3xl md:text-6xl font-extralight text-black text-center md:text-left md:text-nowrap uppercase">
 				{item.title}
 			</h2>
 		</motion.div>
@@ -154,7 +168,7 @@ export default function StackingImages() {
 						{imageData.map((item, i) => (
 							// We render the new component inside the map
 							<AnimatedTitle
-								key={`title-${i}`}
+								key={item.title}
 								i={i}
 								item={item}
 								scrollYProgress={scrollYProgress}

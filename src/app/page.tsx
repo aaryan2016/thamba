@@ -9,33 +9,37 @@ export default function Home() {
 		{
 			direction: false,
 			image:
-				"https://static.wixstatic.com/media/66afa0_0fc1af3eb324451db1a1a2792b2c48c7~mv2.jpg/v1/fill/w_950,h_913,fp_0.58_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/OASIS%20BRANDGUIDELINES-01.jpg",
-			tag: "IDENTITY, communication STRATEGY",
-			path: "/projects/oasis",
-			title: "OASIS VENTURES",
+				"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Dravyas/dravyas-01.webp",
+			tag: "LABEL & PACKAGING DESIGN",
+			path: "/projects/dravyas",
+			title: "DRAVYAS",
+			bgColor: "bg-[#f7f3e5]",
 		},
 		{
 			direction: true,
 			image:
-				"https://static.wixstatic.com/media/66afa0_02b43e57c11e43eeae0480630b6b91ed~mv2.jpg/v1/fill/w_950,h_1063,fp_0.58_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Soda%20or%20Juice%20Can%20Mockup.jpg",
-			tag: "LABEL & PACKAGING DESIGN",
-			path: "/",
-			title: "DRAVYAS",
+				"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/OASIS/OASIS%20BRANDGUIDELINES-01.webp",
+			tag: "IDENTITY, communication STRATEGY",
+			path: "/projects/oasis",
+			title: "OASIS VENTURES",
+			bgColor: "bg-[#67a4ac]",
 		},
 		{
 			direction: false,
 			image:
-				"https://static.wixstatic.com/media/66afa0_52884639175243b9a6a1f2a2e9c5126b~mv2.jpg/v1/crop/x_0,y_48,w_662,h_908/fill/w_662,h_636,fp_0.50_0.52,q_85,enc_avif,quality_auto/portfolio_graphic%20design.jpg",
+				"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design0.jpg",
 			tag: "BOOK COVER, SOCIAL & STATIONERY DESIGN",
-			path: "/",
+			path: "/projects/browser",
 			title: "BROWSER",
+			bgColor: "bg-[#ee9848]",
 		},
 	];
 
 	const productsHorizontal = [
 		{
-			image: "/images/pirul.gif",
-			path: "/",
+			image:
+				"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Pirul/P1.gif",
+			path: "/projects/pirul",
 			title: "PIRUL HANDICARFTS",
 			tag: "BRAND IDENTITY, SOCIAL CAMPAIGN",
 		},
