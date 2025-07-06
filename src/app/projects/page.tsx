@@ -1,5 +1,6 @@
 import HeroSectionDetailed from "@/components/HeroSectionDetailed";
 import ProjectCard from "@/components/ProjectCard";
+import projectsData from "@/data/projectsData";
 
 export default function Projects() {
 	const description =
@@ -14,8 +15,16 @@ export default function Projects() {
 				description={description}
 			/>
 			<div className="grid grid-cols-1 md:grid-cols-2">
-				<ProjectCard />
-				<ProjectCard />
+				{projectsData.map((project) => (
+					<ProjectCard
+						key={project.id}
+						title={project.title}
+						description={project.description}
+						tag={project.tag}
+						imageSrc={project.workImage}
+						path={`/projects/${project.title.toLowerCase()}`}
+					/>
+				))}
 			</div>
 		</>
 	);

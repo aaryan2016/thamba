@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${roboto.variable}`}>
+			<body className="font-helvetica-light">
 				<Header />
 				{children}
 				<Footer />
