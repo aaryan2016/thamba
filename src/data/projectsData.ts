@@ -6,6 +6,8 @@ export interface Project {
 	heroImage: string,
 	workImage: string,
 	imageLinks: string[];
+	bgColor?: string; // new
+
 }
 
 const projectsData: Project[] = [
@@ -45,8 +47,9 @@ const projectsData: Project[] = [
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Dravyas/dravyas-04.webp",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Dravyas/dravyas-05.webp",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Dravyas/dravyas-06.webp",
+		],
+		bgColor : "#b8bc6b",
 
-		]
 	},
 	{
 		id: 3,
@@ -54,7 +57,7 @@ const projectsData: Project[] = [
 		description: "BROWSER is a publishing house and literary platform dedicated to promoting writers through publishing, events, and community engagement.",
 		tag: "BOOK COVERS & ILLUSTRATIONS",
 		heroImage: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design0.jpg",
-		workImage: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design1-fHDfzL468GdMf020PYum0A6gLRa8oy.jpg",
+		workImage: "https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/Untitled_Artwork-vnQgbAieEto8LCljDmMV0iOBV79uj0.webp",
 		imageLinks: [
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design0.jpg",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design1.webp",
@@ -65,8 +68,11 @@ const projectsData: Project[] = [
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design6.webp",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design7.webp",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/BookCovers/portfolio_graphic%20design8.webp",
-		]
+		],
+		bgColor : "#ee9848",
+
 	},
+
 	{
 		id: 4,
 		title: "OASIS",
@@ -128,6 +134,7 @@ const projectsData: Project[] = [
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/HOLA/image6.webp",
 			"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/HOLA/image7.webp",
 		],
+		bgColor : "#272626",
 	},
 
 ];

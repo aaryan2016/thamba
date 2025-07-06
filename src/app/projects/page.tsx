@@ -15,13 +15,15 @@ export default function Projects() {
 				description={description}
 			/>
 			<div className="grid grid-cols-1 md:grid-cols-2">
-				{projectsData.map((project) => (
+				{projectsData.map((project, index) => (
 					<ProjectCard
 						key={project.id}
 						title={project.title}
 						description={project.description}
 						tag={project.tag}
 						imageSrc={project.workImage}
+						bgColor={project.bgColor}
+						shrinkImage={index === 1 || index === 2 || index === 5}
 						path={`/projects/${project.title.toLowerCase()}`}
 					/>
 				))}

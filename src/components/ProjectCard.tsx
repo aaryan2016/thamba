@@ -8,6 +8,8 @@ interface ProjectCardProps {
 	tag?: string;
 	description?: string;
 	path?: string;
+	shrinkImage?: boolean; // new
+	bgColor?: string; // new
 }
 
 export default function ProjectCard({
@@ -16,15 +18,33 @@ export default function ProjectCard({
 	tag = "",
 	description = "",
 	path = "/",
+	shrinkImage = false,
+	bgColor = "",
 }: ProjectCardProps) {
 	return (
-		<div className="relative h-[800px] w-full overflow-hidden group">
-			<Image
-				src={imageSrc}
-				alt={title || "Project Image"}
-				fill
-				className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-			/>
+		<div
+			className="relative h-[800px] w-full overflow-hidden group flex items-center"
+			style={{ backgroundColor: bgColor }}
+		>
+			{shrinkImage ? (
+				// Smaller, centered image
+				<div className="relative mx-auto mt-10 h-[400px] w-[400px]">
+					<Image
+						src={imageSrc}
+						alt={title || "Project Image"}
+						fill
+						className="object-covershadow-lg transition-transform duration-500 ease-in-out group-hover:scale-105"
+					/>
+				</div>
+			) : (
+				// Full cover image
+				<Image
+					src={imageSrc}
+					alt={title || "Project Image"}
+					fill
+					className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+				/>
+			)}
 			<div className="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/40" />
 			<div className="absolute inset-0 flex flex-col justify-between p-8 text-white">
 				{/* Top Right Section */}
