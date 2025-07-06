@@ -3,7 +3,7 @@ import JobCard from "@/components/JobCard";
 import JoinUsForm from "@/components/JoinUsForm";
 import { jobsData, jobsHeaderDescription } from "@/data/jobsData";
 
-const jobs = () => {
+export default function Jobs() {
 	return (
 		<main>
 			<HeroSectionDetailed
@@ -31,6 +31,4 @@ const jobs = () => {
 			</div>
 		</main>
 	);
-};
-
-export default jobs;
+}
