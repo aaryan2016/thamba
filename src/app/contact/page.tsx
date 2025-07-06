@@ -1,23 +1,53 @@
 import Image from "next/image";
-import HeroSectionDetailed from "@/components/HeroSectionDetailed";
+import ScrollFadeInServer from "@/components/ScrollFadeInServer";
 
 export default function ContactPage() {
 	const description = "LET’S MAKE BEAUTIFUL THINGS TOGETHER";
+	const title = "CONTACT US";
+	const imageSrc =
+		"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/contact.webp";
+	const imageAlt = "A collage of Thamba's creative work";
 
 	return (
 		<>
-			<HeroSectionDetailed
-				title="CONTACT US"
-				imageSrc="/contact.avif"
-				imageAlt="A collage of Thamba's creative work"
-				description={description}
-			/>
+			<div className="pt-10 flex flex-col md:flex-row bg-[#facf41] text-black items-start justify-center p-4 border-t-1 border-black">
+				<div className="flex flex-col items-center justify-center w-full md:w-1/2 gap-4">
+					<ScrollFadeInServer yOffset={20} delay={0}>
+						<h1 className="text-2xl md:text-6xl font-light p-2 text-center">
+							{title}
+						</h1>
+					</ScrollFadeInServer>
+					<ScrollFadeInServer yOffset={20} delay={0.2}>
+						<Image
+							src={imageSrc}
+							alt={imageAlt}
+							width={500}
+							height={500}
+							priority
+						/>
+					</ScrollFadeInServer>
+				</div>
+				<ScrollFadeInServer
+					yOffset={20}
+					delay={0.4}
+					className="w-full md:w-1/2 p-4 md:p-20"
+				>
+					<p className="text-xl md:text-5xl font-light">{description}</p>
+					<div className="font-light text-2xl md:text-4xl pt-10 md:pt-20">
+						Mail:
+						<a href="mailto:info@mysite.com">info@mysite.com</a>
+					</div>
+					<div className="font-light text-2xl md:text-4xl pt-5">
+						Tel: +91 90711 51567
+					</div>
+				</ScrollFadeInServer>
+			</div>
 
 			<div className="flex flex-col md:flex-row ">
 				<div className="w-full md:w-1/2 bg-[#ae81ce]">
 					<Image
 						src={
-							"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/contact.webp"
+							"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Static%20/thamba%20contact%20page-9Zu6WzSWVq0LcNv3pWA1Qbeff3h4pq.webp"
 						}
 						alt="services-1"
 						width={800}
