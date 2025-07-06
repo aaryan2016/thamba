@@ -140,7 +140,7 @@ export default function Header() {
 								key={href}
 								href={href}
 								className={`text-3xl md:text-6xl font-light uppercase md:text-nowrap text-black hover:text-gray-200 transition-colors duration-50 ${
-									isActive ? "underline decoration-4 underline-offset-8" : ""
+									isActive ? "text-white" : ""
 								}`}
 								onClick={() => setIsOpen(false)}
 							>
