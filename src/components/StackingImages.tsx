@@ -131,17 +131,20 @@ export default function StackingImages() {
 		offset: ["start center", "end center"],
 	});
 
+	const headerOpacity = useTransform(scrollYProgress, [0.88, 0.98], [1, 0]);
+	const headerY = useTransform(scrollYProgress, [0.88, 0.98], [0, -50]);
+
 	return (
 		<div ref={containerRef} className="relative h-[300vh] bg-gray-100 p-20">
 			{/* Header Title */}
-			<div className="sticky top-20 py-10 text-center px-4">
+			<motion.div className="sticky top-20 py-5 text-center px-4 z-50" style={{ opacity: headerOpacity, y: headerY }}>
 				<h1 className="text-5xl md:text-8xl font-extralight text-gray-900 tracking-wide">
 					TRUSTED BY
 				</h1>
-			</div>
+			</motion.div>
 
-			<div className="sticky top-56 flex justify-center items-center px-4">
-				<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+			<div className="sticky top-64 flex justify-center items-center px-4">
+				<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 py-4">
 					{/* Images Section */}
 					<div className="relative w-80 h-96">
 						{imageData.map((item, i) => (
@@ -157,7 +160,8 @@ export default function StackingImages() {
 					</div>
 
 					{/* Titles Section */}
-					<div className="relative w-80 md:w-auto h-48 md:h-96 flex flex-col justify-center items-center">
+					{/* <div className="relative w-80 md:w-auto h-48 md:h-96 flex flex-col justify-center items-center"> */}
+					<div className="relative w-80 md:w-auto h-48 md:h-96 flex flex-col justify-center items-center z-10">
 						{imageData.map((item, i) => (
 							// We render the new component inside the map
 							<AnimatedTitle
