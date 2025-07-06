@@ -55,7 +55,7 @@ function ImageCard({
 
 	const y = useTransform(cardProgress, [0, 1], [200, -i * 8]);
 	const rotate = useTransform(cardProgress, [0, 1], [0, (i - 1) * 3]);
-	const scale = useTransform(cardProgress, [0, 1], [0.8, 1 - i * 0.05]);
+	// const scale = useTransform(cardProgress, [0, 1], [0.8, 1 - i * 0.05]);
 	const opacity = useTransform(cardProgress, [0, 0.3, 1], [0, 1, 1]);
 
 	return (
@@ -64,7 +64,6 @@ function ImageCard({
 			style={{
 				y,
 				rotate,
-				scale,
 				opacity,
 				zIndex: i,
 			}}

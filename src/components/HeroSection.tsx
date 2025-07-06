@@ -12,9 +12,9 @@ export default function HeroSection() {
 					<div className="text-6xl md:text-8xl">WANT SOMETHING ELSE?</div>
 
 					{/* 
-          This is the agency line. We remove `text-right` and add `self-end` 
-          to align it to the end of the flex container.
-        */}
+       				   This is the agency line. We remove `text-right` and add `self-end` 
+        			   to align it to the end of the flex container.
+       				 */}
 					<div className="text-2xl self-end pt-2">THAMBA. CREATIVE AGENCY</div>
 				</div>
 
