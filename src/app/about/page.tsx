@@ -49,7 +49,12 @@ export default function AboutPage() {
 						</h1>
 					</ScrollFadeInServer>
 					<ScrollFadeInServer yOffset={20} delay={0.2}>
-						<Image src="/about.avif" alt={title} width={500} height={500} />
+						<Image
+							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/about.webp"
+							alt={title}
+							width={500}
+							height={500}
+						/>
 					</ScrollFadeInServer>
 				</div>
 				<ScrollFadeInServer

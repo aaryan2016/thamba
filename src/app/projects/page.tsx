@@ -10,7 +10,7 @@ export default function Projects() {
 		<>
 			<HeroSectionDetailed
 				title="OUR PROJECTS"
-				imageSrc="/work-thamba.avif"
+				imageSrc="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/work.webp"
 				imageAlt="A collage of Thamba's creative work"
 				description={description}
 			/>

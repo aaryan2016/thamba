@@ -17,7 +17,7 @@ export default function ContactPage() {
 				<div className="w-full md:w-1/2 bg-[#ae81ce]">
 					<Image
 						src={
-							"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Static%20/thamba%20contact%20page-9Zu6WzSWVq0LcNv3pWA1Qbeff3h4pq.webp"
+							"https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/contact.webp"
 						}
 						alt="services-1"
 						width={800}

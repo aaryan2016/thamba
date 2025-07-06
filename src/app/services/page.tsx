@@ -10,7 +10,7 @@ export default function ServicesPage() {
 		<>
 			<HeroSectionDetailed
 				title="WHAT DO WE DO"
-				imageSrc="/services.avif"
+				imageSrc="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/services.webp"
 				imageAlt="A collage of Thamba's creative work"
 				description={description}
 			/>
