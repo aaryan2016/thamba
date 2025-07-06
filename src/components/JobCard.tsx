@@ -1,9 +1,10 @@
 "use client"
+
 import React from 'react'
 import { Button } from './ui/button'
 import { Job } from '@/data/jobsData';
 
-function JobCard({
+export default function JobCard({
     jobTitle, aboutTheJob, requirements }: Omit<Job, 'id'>) {
 
     const handleApplyClick = () => {
@@ -53,5 +54,3 @@ function JobCard({
         </div>
     )
 }
-
-export default JobCard
