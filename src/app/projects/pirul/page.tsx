@@ -33,6 +33,7 @@ export default function Page() {
 								alt={`${project.title} - Image ${index + 1}`}
 								width={1200}
 								height={800}
+								unoptimized={index === 0}
 								className="shadow-lg w-full h-auto"
 							/>
 						</div>
