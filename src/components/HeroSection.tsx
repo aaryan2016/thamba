@@ -48,14 +48,14 @@ export default function HeroSection() {
 						/>
 						<Illustration
 							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/illustration2.webp"
-							className="scale-50 top-[37%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
+							className="scale-50 top-[40%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
 							delay={0.5}
 							width={200}
 							height={200}
 						/>
 						<Illustration
 							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/illustration3.webp"
-							className="top-[45%] left-[70%] lg:top-[50%] lg:left-[70%] lg:scale-100"
+							className="top-[50%] left-[70%] lg:top-[50%] lg:left-[70%] lg:scale-100"
 							delay={0.7}
 							width={200}
 							height={200}
@@ -76,7 +76,7 @@ export default function HeroSection() {
 					<div className="text-2xl self-end pt-2">THAMBA. CREATIVE AGENCY</div>
 				</div>
 
-				<div className="pt-20 w-full md:w-2/3 font-light ">
+				<div className="pt-30 w-full md:w-2/3 font-light ">
 					<div className="text-2xl md:text-5xl">WHAT WE DO</div>
 					<div className="text-xl md:text-3xl pt-5">
 						We are a creative design studio where we build brands that look
