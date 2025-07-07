@@ -136,7 +136,7 @@ export default function StackingImages() {
 
 	return (
 		<div ref={containerRef} className="relative h-[300vh] bg-gray-100 p-20">
-			{/* Header Title */}
+			{/* Header Title with Framer motion */}
 			<motion.div className="sticky top-20 py-5 text-center px-4 z-50" style={{ opacity: headerOpacity, y: headerY }}>
 				<h1 className="text-5xl md:text-8xl font-extralight text-gray-900 tracking-wide">
 					TRUSTED BY
