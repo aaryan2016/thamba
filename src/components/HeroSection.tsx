@@ -48,14 +48,14 @@ export default function HeroSection() {
 						/>
 						<Illustration
 							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/illustration2.webp"
-							className="scale-50 top-[40%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
+							className="scale-50 top-[37%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
 							delay={0.5}
 							width={200}
 							height={200}
 						/>
 						<Illustration
 							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/illustration3.webp"
-							className="top-[55%] left-[70%] lg:top-[50%] lg:left-[70%] lg:scale-100"
+							className="top-[45%] left-[70%] lg:top-[50%] lg:left-[70%] lg:scale-100"
 							delay={0.7}
 							width={200}
 							height={200}
