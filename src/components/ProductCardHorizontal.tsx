@@ -18,7 +18,7 @@ export default function ProductCardHorizontal({
 }: ProductCardHorizontalProps) {
 	return (
 		<div
-			className={`mx-auto flex w-full flex-col overflow-hidden bg-white shadow-lg border-b-2 border-black`}
+			className={` flex w-full flex-col overflow-hidden bg-white shadow-lg border-b-2 border-black`}
 		>
 			{/* Image Section */}
 			<div className="relative h-[80vh]">

@@ -6,7 +6,7 @@ export default function FeaturedBanner() {
 			{/* Attach the ref to the main container to observe its visibility */}
 			{/* The main div itself doesn't need to be a motion.div if its children are */}
 			<div className="h-fit border-2 border-black p-8 text-black">
-				<div className="container mx-auto flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-8">
+				<div className=" flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-8">
 					<ScrollFadeInServer
 						className="w-full md:w-1/2"
 						yOffset={50}

@@ -28,7 +28,7 @@ export default function ProjectCard({
 		>
 			{shrinkImage ? (
 				// Smaller, centered image
-				<div className="relative mx-auto mt-10 h-[400px] w-[400px]">
+				<div className="relative  mt-10 h-[400px] w-[400px]">
 					<Image
 						src={imageSrc}
 						alt={title || "Project Image"}
