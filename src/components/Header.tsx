@@ -84,7 +84,7 @@ export default function Header() {
 									></path>
 								)}
 							</svg>
-							<div className="hiden md:block md:text-xl">Menu</div>
+							<div className="hidden md:block md:text-xl">Menu</div>
 						</button>
 					</div>
 				</div>
