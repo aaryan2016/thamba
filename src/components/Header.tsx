@@ -55,7 +55,7 @@ export default function Header() {
 						<button
 							type="button"
 							onClick={() => setIsOpen(!isOpen)}
-							className="text-black focus:outline-none flex items-center align-baseline space-x-2 pr-10"
+							className="text-black focus:outline-none flex items-center align-baseline space-x-2"
 							aria-controls="slide-out-menu"
 							aria-expanded={isOpen}
 						>
