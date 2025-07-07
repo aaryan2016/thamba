@@ -48,7 +48,7 @@ export default function HeroSection() {
 						/>
 						<Illustration
 							src="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/illustration2.webp"
-							className="scale-50 top-[40%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
+							className="scale-50 top-[42%] left-[-10%] lg:top-[30%] lg:left-[35%] lg:scale-100"
 							delay={0.5}
 							width={200}
 							height={200}
