@@ -57,7 +57,7 @@ export default function ContactPage() {
 				</div>
 				<div className="flex flex-col w-full md:w-1/2 bg-[#ec892e] text-black uppercase font-light p-8 md:p-20 lg:p-40 items-start justify-center gap-10">
 					<div className="text-4xl md:text-6xl">Location</div>
-					<div className="text-3xl md:text-4xl">Napur</div>
+					<div className="text-3xl md:text-4xl">Nagpur</div>
 					<div className="text-lg md:text-xl">
 						18, SHIMPLA, Suryoday enclave, opp. Gaurav apartments, Seminary
 						Hills, Nagpur-440006
