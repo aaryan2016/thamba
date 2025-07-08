@@ -21,7 +21,7 @@ export default function BottomNavBar({
 			{prevProjectSlug ? (
 				<Link
 					href={`/projects/${prevProjectSlug}`}
-					className="uppercase text-2xl font-light flex items-center gap-2 hover:underline"
+					className="uppercase text-lg md:text-2xl font-light flex items-center gap-2 hover:underline"
 				>
 					<ChevronLeft />
 					<div>Previous</div>
@@ -32,7 +32,7 @@ export default function BottomNavBar({
 			{nextProjectSlug ? (
 				<Link
 					href={`/projects/${nextProjectSlug}`}
-					className="uppercase text-2xl font-light flex items-center gap-2 hover:underline"
+					className="uppercase text-lg md:text-2xl font-light flex items-center gap-2 hover:underline"
 				>
 					<div>Next</div>
 					<ChevronRight />

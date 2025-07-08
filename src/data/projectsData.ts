@@ -97,7 +97,7 @@ const projectsData: Project[] = [
 	},
 	{
 		id: 5,
-		title: "DRIVE THE FURTURE",
+		title: "Bluone",
 		description: "A publishing house dedicated to bringing thought-provoking and impactful stories to readers worldwide",
 		tag: "SOCIAL MEDIA IDENTITY, CAMPAIGN",
 		heroImage: "",

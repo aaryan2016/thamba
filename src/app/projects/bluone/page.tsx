@@ -6,7 +6,7 @@ import projectsData from "@/data/projectsData";
 export default function Page() {
 	// Find the project by title, case-insensitively
 	const project = projectsData.find(
-		(p) => p.title.toLowerCase() === "DRIVE THE FURTURE".toLowerCase(),
+		(p) => p.title.toLowerCase() === "Bluone".toLowerCase(),
 	);
 
 	if (!project) {
