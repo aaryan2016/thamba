@@ -3,8 +3,8 @@ import ScrollFadeInServer from "@/components/ScrollFadeInServer";
 
 interface HeroSectionDetailedProps {
 	title: string;
-	imageSrc: string;
-	imageAlt: string;
+	imageSrc?: string;
+	imageAlt?: string;
 	description: string;
 }
 
@@ -23,13 +23,15 @@ export default function HeroSectionDetailed({
 					</h1>
 				</ScrollFadeInServer>
 				<ScrollFadeInServer yOffset={20} delay={0.2}>
-					<Image
-						src={imageSrc}
-						alt={imageAlt}
-						width={500}
-						height={500}
-						priority
-					/>
+					{imageSrc && imageAlt && (
+						<Image
+							src={imageSrc}
+							alt={imageAlt}
+							width={500}
+							height={500}
+							priority
+						/>
+					)}
 				</ScrollFadeInServer>
 			</div>
 			<ScrollFadeInServer

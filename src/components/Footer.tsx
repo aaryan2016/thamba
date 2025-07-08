@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BottomSection from "@/components/BottomSection";
 import HireUsForm from "@/components/ContactForm";
 import SideBottom from "@/components/SideBottom";
@@ -20,7 +21,9 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className="flex justify-between items-center p-5">
-				<div>Privacy Policy</div>
+				<div>
+					<Link href="/privacy-policy">Privacy Policy</Link>
+				</div>
 				<div>
 					&copy; 2025 by THAMBA
 					<sup>TM</sup>
