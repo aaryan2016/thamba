@@ -5,7 +5,7 @@ import { jobsData, jobsHeaderDescription } from "@/data/jobsData";
 
 export default function Jobs() {
 	return (
-		<main>
+		<>
 			<HeroSectionDetailed
 				title="WE ARE GROWING"
 				imageSrc="https://vi5tax46l0ad1sws.public.blob.vercel-storage.com/Web%20Illustrations/job.webp"
@@ -19,16 +19,16 @@ export default function Jobs() {
 					</div>
 				))}
 			</div>
-			<div className="joinUs flex bg-[#b7c7ff] py-23 px-11">
-				<div className="leftPortion w-164">
+			<div className="joinUs flex flex-col bg-[#b7c7ff] px-4 py-16 md:flex-row md:px-11 md:py-23">
+				<div className="leftPortion mb-8 w-full md:mb-0 md:w-1/3">
 					<p className="font-helvetica-light text-3xl">JOIN US</p>
 				</div>
-				<div className="rightPortion p-6 w-171">
+				<div className="rightPortion w-full p-6 md:w-2/3">
 					<div className="hiringForm">
 						<JoinUsForm />
 					</div>
 				</div>
 			</div>
-		</main>
+		</>
 	);
 }

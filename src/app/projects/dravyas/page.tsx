@@ -43,7 +43,7 @@ export default async function Page() {
 						className="w-full h-auto"
 					/>
 				</div>
-				<div className="w-full md:w-1/2 p-30 bg-[#7a6340]">
+				<div className="w-full md:w-1/2 p-10 md:p-30 bg-[#7a6340]">
 					<Image
 						src={project.imageLinks[2]}
 						alt={project.title}
@@ -54,7 +54,7 @@ export default async function Page() {
 				</div>
 			</div>
 			<div className="flex flex-col md:flex-row w-full">
-				<div className="w-full md:w-1/2 p-30 bg-[#7a6340]">
+				<div className="w-full md:w-1/2 p-10 md:p-30 bg-[#7a6340]">
 					<Image
 						src={project.imageLinks[3]}
 						alt={project.title}

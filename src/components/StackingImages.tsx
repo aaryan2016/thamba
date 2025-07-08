@@ -146,7 +146,7 @@ export default function StackingImages() {
 				</h1>
 			</motion.div>
 
-			<div className="sticky top-64 flex justify-center items-center px-4">
+			<div className="sticky top-50 flex justify-center items-center px-4">
 				<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 py-4">
 					{/* Images Section */}
 					<div className="relative w-80 h-96">
