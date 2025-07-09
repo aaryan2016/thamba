@@ -14,7 +14,7 @@ export default function SideBottom() {
 					height={400}
 				/>
 			</div>
-			<div className="flex items-center justify-center gap-20 w-full px-5 p-10">
+			<div className="flex items-center justify-between gap-5 p-10">
 				<div className="uppercase font-extralight text-lg text-white hover:text-gray-300 hover:cursor-pointer">
 					linkedin
 				</div>
