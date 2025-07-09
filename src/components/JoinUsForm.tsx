@@ -1,5 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -25,6 +26,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 const positions = [
+	"Select a Position",
 	"Frontend Developer",
 	"Backend Developer",
 	"UI/UX Designer",
@@ -79,14 +81,41 @@ function JoinUsForm() {
 		},
 	});
 
-	const onSubmit = (values: z.infer<typeof joinUsFormSchema>) => {
-		console.log("Form submitted:", values);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [submissionError, setSubmissionError] = useState<string | null>(null);
+	const [submissionSuccess, setSubmissionSuccess] = useState(false);
 
-		// Optional: Show success alert
-		alert("Form submitted successfully!");
+	const onSubmit = async (values: z.infer<typeof joinUsFormSchema>) => {
+		setIsSubmitting(true);
+		setSubmissionError(null);
+		setSubmissionSuccess(false);
+		try {
+			const response = await fetch("/api/hire", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(values),
+			});
 
-		// Optional: Reset the form
-		form.reset();
+			if (response.ok) {
+				console.log("Form submitted successfully!");
+				setSubmissionSuccess(true);
+				form.reset();
+			} else {
+				const errorData = await response.json();
+				setSubmissionError(
+					errorData.error || "An unexpected error occurred during submission.",
+				);
+			}
+		} catch (error: any) {
+			console.error("Submission failed:", error);
+			setSubmissionError(
+				error.message || "An unexpected error occurred during submission.",
+			);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -288,8 +317,12 @@ function JoinUsForm() {
 
 						{/* Submit */}
 						<div className="Submit">
-							<Button className="w-full rounded-none py-5.5 px-12 text-base font-helvetica-light uppercase hover:border hover:border-black hover:bg-transparent hover:text-black sm:text-md md:text-lg md:w-auto md:px-28">
-								Submit
+							<Button
+								type="submit"
+								disabled={isSubmitting}
+								className="w-full rounded-none py-5.5 px-12 text-base font-helvetica-light uppercase hover:border hover:border-black hover:bg-transparent hover:text-black sm:text-md md:text-lg md:w-auto md:px-28"
+							>
+								{isSubmitting ? "Submitting..." : "Submit"}
 							</Button>
 						</div>
 					</div>

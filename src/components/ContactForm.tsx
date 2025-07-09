@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -44,13 +45,35 @@ export default function HireUsForm() {
 			message: "",
 		},
 	});
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
-	function onSubmit(values: z.infer<typeof hireUsFormSchema>) {
-		console.log("Form Submitted! Values:", values);
-		// Here you would typically send the data to your backend API
-		// e.g., fetch('/api/contact', { method: 'POST', body: JSON.stringify(values) })
-		alert("Form submitted! Check the console for the values.");
-	}
+	const onSubmit = async (values: z.infer<typeof hireUsFormSchema>) => {
+		try {
+			setIsSubmitting(true);
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(values),
+			});
+			if (response.ok) {
+				console.log("Form submitted successfully!");
+				form.reset(); // Clear the form
+				alert("Your message has been sent!");
+			} else if (response.status === 429) {
+				alert("Too many requests. Please try again later.");
+			} else {
+				console.error("Form submission failed.");
+				alert("Failed to send your message. Please try again.");
+			}
+		} catch (error) {
+			alert("Something went wrong. Please try again later");
+			console.error("An error occurred during form submission:", error);
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
 
 	return (
 		<section className="w-full max-w-3xl p-8 bg-[#939bfb]">
@@ -135,8 +158,9 @@ export default function HireUsForm() {
 						<Button
 							type="submit"
 							className="bg-blue-600 text-white hover:bg-blue-300"
+							disabled={isSubmitting}
 						>
-							Submit
+							{isSubmitting ? "Submitting..." : "Submit"}
 						</Button>
 					</div>
 				</form>
