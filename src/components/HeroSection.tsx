@@ -2,6 +2,7 @@
 
 "use client";
 import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Illustration } from "@/components/Illustrations";
 
@@ -76,12 +77,30 @@ export default function HeroSection() {
 					<div className="text-2xl self-end pt-2">THAMBA. CREATIVE AGENCY</div>
 				</div>
 
-				<div className="pt-30 w-full md:w-2/3 font-light ">
+				<div className="pt-20 w-full font-light">
 					<div className="text-2xl md:text-5xl">WHAT WE DO</div>
-					<div className="text-xl md:text-3xl pt-5">
-						We are a creative design studio where we build brands that look
-						sharp, feel right, and make noise. From strategy to design, we craft
-						everything you need to stand out.
+					<div className="flex flex-col md:flex-row justify-between items-start w-full mt-5">
+						<div className="text-xl md:text-3xl w-full md:w-2/3">
+							We are a creative design studio where we build brands that look
+							sharp, feel right, and make noise. From strategy to design, we
+							craft everything you need to stand out.
+						</div>
+
+						<div className="flex flex-col items-start md:items-end mt-5 md:mt-0">
+							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
+								linkedin
+							</div>
+							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
+								<Link href="https://www.instagram.com/thamba.studio/#">
+									Instagram
+								</Link>
+							</div>
+							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
+								<Link href="https://www.threads.com/@thamba.studio">
+									Threads
+								</Link>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
