@@ -82,8 +82,8 @@ function JoinUsForm() {
 	});
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [submissionError, setSubmissionError] = useState<string | null>(null);
-	const [submissionSuccess, setSubmissionSuccess] = useState(false);
+	const [, setSubmissionError] = useState<string | null>(null);
+	const [, setSubmissionSuccess] = useState(false);
 
 	const onSubmit = async (values: z.infer<typeof joinUsFormSchema>) => {
 		setIsSubmitting(true);
@@ -108,11 +108,15 @@ function JoinUsForm() {
 					errorData.error || "An unexpected error occurred during submission.",
 				);
 			}
-		} catch (error: any) {
+		} catch (error: unknown) {
 			console.error("Submission failed:", error);
-			setSubmissionError(
-				error.message || "An unexpected error occurred during submission.",
-			);
+			if (error instanceof Error) {
+				setSubmissionError(
+					error.message || "An unexpected error occurred during submission.",
+				);
+			} else {
+				setSubmissionError("An unexpected error occurred during submission.");
+			}
 		} finally {
 			setIsSubmitting(false);
 		}
