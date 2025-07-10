@@ -95,7 +95,9 @@ export default function HireUsForm() {
 	return (
 		<section className="w-full max-w-3xl p-8 bg-[#939bfb]">
 			<h1 className="text-4xl md:text-5xl font-extralight mb-2">Hire Us</h1>
-			<p className="text-black mb-8">Have a project in mind? Let's talk.</p>
+			<p className="text-black mb-8">
+				Have a project in mind? Let&apos;s talk.
+			</p>
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 					{/* ... (Your other FormFields for firstName, lastName, email, message remain unchanged) ... */}
@@ -174,7 +176,7 @@ export default function HireUsForm() {
 					{/* 3. Add the HCaptcha component to your form */}
 					<div className="space-y-2">
 						<HCaptcha
-							sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY!}
+							sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""}
 							onVerify={(token) => {
 								// 4. Set the token value in the form state
 								form.setValue("hCaptchaToken", token);
