@@ -1,12 +1,12 @@
 "use client";
+
+import HCaptcha from "@hcaptcha/react-hcaptcha"; // 1. IMPORT HCAPTCHA
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 // NOTE: These components are assumed to be from shadcn/ui.
-// If not present, you can add them using:
-// npx shadcn-ui@latest add button form input textarea
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -33,6 +33,8 @@ const positions = [
 	"Project Manager",
 	"Other",
 ] as const;
+
+// 2. UPDATE ZOD SCHEMA WITH HCAPTCHA TOKEN
 const joinUsFormSchema = z.object({
 	firstName: z.string().min(2, {
 		message: "First name must be at least 2 characters.",
@@ -64,9 +66,16 @@ const joinUsFormSchema = z.object({
 		})
 		.optional()
 		.or(z.literal("")),
+	// Add the hCaptcha token validation
+	hCaptchaToken: z
+		.string()
+		.min(1, { message: "Please complete the hCaptcha." }),
 });
 
 function JoinUsForm() {
+	// 3. CREATE A REF FOR THE HCAPTCHA COMPONENT
+	const captchaRef = useRef<HCaptcha>(null);
+
 	const form = useForm<z.infer<typeof joinUsFormSchema>>({
 		resolver: zodResolver(joinUsFormSchema),
 		defaultValues: {
@@ -78,17 +87,20 @@ function JoinUsForm() {
 			cvUrl: "",
 			portfolioUrl: "",
 			comments: "",
+			hCaptchaToken: "", // Add default value for the token
 		},
 	});
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [, setSubmissionError] = useState<string | null>(null);
-	const [, setSubmissionSuccess] = useState(false);
+	const [submissionError, setSubmissionError] = useState<string | null>(null);
+	const [submissionSuccess, setSubmissionSuccess] = useState(false);
 
+	// 4. UPDATE THE ONSUBMIT HANDLER
 	const onSubmit = async (values: z.infer<typeof joinUsFormSchema>) => {
 		setIsSubmitting(true);
 		setSubmissionError(null);
 		setSubmissionSuccess(false);
+
 		try {
 			const response = await fetch("/api/hire", {
 				method: "POST",
@@ -102,11 +114,15 @@ function JoinUsForm() {
 				console.log("Form submitted successfully!");
 				setSubmissionSuccess(true);
 				form.reset();
+				captchaRef.current?.resetCaptcha(); // Reset captcha on success
 			} else {
 				const errorData = await response.json();
 				setSubmissionError(
-					errorData.error || "An unexpected error occurred during submission.",
+					errorData.message ||
+						"An unexpected error occurred during submission.",
 				);
+				captchaRef.current?.resetCaptcha(); // Reset captcha on failure
+				form.setValue("hCaptchaToken", ""); // Clear the invalid token from form state
 			}
 		} catch (error: unknown) {
 			console.error("Submission failed:", error);
@@ -319,6 +335,27 @@ function JoinUsForm() {
 							/>
 						</div>
 
+						{/* 5. ADD THE HCAPTCHA COMPONENT TO THE FORM */}
+						<div className="mb-13 space-y-2">
+							<HCaptcha
+								sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""}
+								onVerify={(token) => {
+									form.setValue("hCaptchaToken", token);
+									form.clearErrors("hCaptchaToken"); // Manually clear validation error
+								}}
+								onExpire={() => {
+									form.setValue("hCaptchaToken", ""); // Reset on expiration
+								}}
+								ref={captchaRef}
+							/>
+							{/* This will display the Zod error message for the hCaptcha field */}
+							{form.formState.errors.hCaptchaToken && (
+								<p className="text-sm font-medium text-destructive">
+									{form.formState.errors.hCaptchaToken.message}
+								</p>
+							)}
+						</div>
+
 						{/* Submit */}
 						<div className="Submit">
 							<Button
@@ -328,6 +365,18 @@ function JoinUsForm() {
 							>
 								{isSubmitting ? "Submitting..." : "Submit"}
 							</Button>
+						</div>
+
+						{/* Optional: Display success/error messages to the user */}
+						<div className="mt-4 h-6">
+							{submissionSuccess && (
+								<p className="text-green-600">
+									Application submitted successfully!
+								</p>
+							)}
+							{submissionError && (
+								<p className="text-destructive">{submissionError}</p>
+							)}
 						</div>
 					</div>
 				</form>
