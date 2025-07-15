@@ -14,7 +14,7 @@ export default function SideBottom() {
 					height={400}
 				/>
 			</div>
-			<div className="flex items-center justify-between gap-5 pt-10 p-5">
+			<div className="flex items-center justify-between gap-5 md:pt-10 p-5">
 				<div className="uppercase font-extralight text-lg text-white hover:text-gray-300 hover:cursor-pointer">
 					<Link
 						href="https://www.linkedin.com/company/thamba-studio/"
