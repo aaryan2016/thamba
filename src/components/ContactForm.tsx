@@ -109,11 +109,7 @@ export default function HireUsForm() {
 								<FormItem className="flex-1">
 									<FormLabel className="font-light">First Name</FormLabel>
 									<FormControl>
-										<Input
-											className="bg-white"
-											placeholder="e.g. Jane"
-											{...field}
-										/>
+										<Input className="bg-white" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -126,11 +122,7 @@ export default function HireUsForm() {
 								<FormItem className="flex-1">
 									<FormLabel className="font-light">Last Name</FormLabel>
 									<FormControl>
-										<Input
-											className="bg-white"
-											placeholder="e.g. Doe"
-											{...field}
-										/>
+										<Input className="bg-white" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -144,12 +136,7 @@ export default function HireUsForm() {
 							<FormItem>
 								<FormLabel className="font-light">Email</FormLabel>
 								<FormControl>
-									<Input
-										className="bg-white"
-										type="email"
-										placeholder="your.email@example.com"
-										{...field}
-									/>
+									<Input className="bg-white" type="email" {...field} />
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -163,7 +150,6 @@ export default function HireUsForm() {
 								<FormLabel className="font-light">Message</FormLabel>
 								<FormControl>
 									<Textarea
-										placeholder="Tell us about your dream..."
 										className="resize-y min-h-[150px] bg-white"
 										{...field}
 									/>

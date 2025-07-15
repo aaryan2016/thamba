@@ -158,7 +158,6 @@ function JoinUsForm() {
 											<input
 												type="text"
 												className="p-3 font-helvetica-light border-b border-black rounded-none focus-visible:ring-0 focus-visible:outline-none"
-												placeholder="e.g. John"
 												{...field}
 											/>
 										</FormControl>
@@ -179,7 +178,6 @@ function JoinUsForm() {
 											<input
 												type="text"
 												className="p-3 font-helvetica-light  border-b border-black rounded-none focus-visible:ring-0 focus-visible:outline-none"
-												placeholder="e.g. Doe"
 												{...field}
 											/>
 										</FormControl>
@@ -204,7 +202,6 @@ function JoinUsForm() {
 											<input
 												type="text"
 												className="p-3 font-helvetica-light border-b border-black rounded-none focus-visible:ring-0 focus-visible:outline-none"
-												placeholder="e.g. johndoe@example.com"
 												{...field}
 											/>
 										</FormControl>
@@ -225,7 +222,6 @@ function JoinUsForm() {
 											<input
 												type="text"
 												className="p-3 font-helvetica-light  border-b border-black rounded-none focus-visible:ring-0 focus-visible:outline-none"
-												placeholder="e.g. +919876543210"
 												{...field}
 											/>
 										</FormControl>
@@ -325,7 +321,6 @@ function JoinUsForm() {
 										<FormControl>
 											<Textarea
 												className="mt-3 font-helvetica-light shadow-none resize-none h-24 overflow-y-auto border-0 border-b border-black rounded-none focus-visible:ring-0 focus-visible:outline-none focus-visible:border-black"
-												placeholder="Tell us a bit about yourself"
 												{...field}
 											/>
 										</FormControl>

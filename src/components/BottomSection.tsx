@@ -7,10 +7,10 @@ export default function BottomSection() {
 			<p className="flex flex-wrap justify-center gap-x-2 gap-y-1 text-center text-2xl font-light md:text-4xl">
 				<span>Get in touch at</span>
 				<a
-					href="mailto:info@mysite.com"
+					href="mailto:hello@thamba.in"
 					className="underline transition-opacity hover:opacity-80"
 				>
-					info@mysite.com
+					hello@thamba.in
 				</a>
 			</p>
 		</section>

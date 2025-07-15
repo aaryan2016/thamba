@@ -88,15 +88,29 @@ export default function HeroSection() {
 
 						<div className="flex flex-col items-start md:items-end mt-5 md:mt-0">
 							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
-								linkedin
+								<Link
+									href="https://www.linkedin.com/company/thamba-studio/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									linkedin
+								</Link>
 							</div>
 							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
-								<Link href="https://www.instagram.com/thamba.studio/#">
+								<Link
+									href="https://www.instagram.com/thamba.studio/#"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									Instagram
 								</Link>
 							</div>
 							<div className="uppercase font-extralight hover:text-gray-300 hover:cursor-pointer hidden md:block">
-								<Link href="https://www.threads.com/@thamba.studio">
+								<Link
+									href="https://www.threads.com/@thamba.studio"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									Threads
 								</Link>
 							</div>

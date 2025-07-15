@@ -4,7 +4,6 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Providers } from "./provider";
 
 const roboto = Roboto({
 	weight: "200", // '300' = Roboto Light
@@ -34,7 +33,7 @@ export default function RootLayout({
 				<div className="w-full">
 					<Header />
 				</div>
-				<Providers>{children}</Providers>
+				{children}
 				<Footer />
 				<Analytics />
 			</body>

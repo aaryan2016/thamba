@@ -35,7 +35,7 @@ export default function ContactPage() {
 					<p className="text-xl md:text-5xl font-light">{description}</p>
 					<div className="font-light text-2xl md:text-4xl pt-10 md:pt-20">
 						Mail:
-						<a href="mailto:info@mysite.com">info@mysite.com</a>
+						<a href="mailto:hello@thamba.in">hello@thamba.in</a>
 					</div>
 					<div className="font-light text-2xl md:text-4xl pt-5">
 						Tel: +91 90711 51567
@@ -65,10 +65,10 @@ export default function ContactPage() {
 					<div>
 						<div className="text-xl md:text-2xl">
 							<a
-								href="mailto:info@mysite.com"
+								href="mailto:hello@thamba.in"
 								className="underline transition-opacity hover:opacity-80"
 							>
-								INFO@MYSITE.COM
+								hello@thamba.in
 							</a>
 						</div>
 						<div className="text-xl md:text-2xl">+91 90711 51567</div>
