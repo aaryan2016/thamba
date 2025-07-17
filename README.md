@@ -6,7 +6,7 @@ Thamba is a responsive, multi-page website built for a creative digital agency, 
 
 ## Demo
 
-Visit the live site here: [thamba-five.vercel.app](thamba-five.vercel.app)
+Visit the live site here: [thamba-five.vercel.app](https://thamba-five.vercel.app)
 
 ## Features
 
